@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const weatherMenus = {
-        "Clear": ["", "스테이크", "샐러드"], // 맑은날
-        "Rain": ["김치찌개", "된장찌개", "라면"], // 비오는날
-        "Clouds": ["떡볶이", "비빔밥", "치킨"], // 흐린날
-        "Snow": ["떡볶이", "김치찌개", "라면"], // 눈오는날
-        "Hot": ["냉면", "막국수", ""] // 더운날
+        "Clear": ["그릴드 치킨", "김밥", "스테이크", "샐러드"], // 맑은날
+        "Rain": ["수제비","칼국수", "튀김덮밥", "라면","해물파전"], // 비오는날
+        "Clouds": ["만두전골", "솥밥", "치킨"], // 흐린날
+        "Snow": ["떡볶이", "김치찌개", "라면","부대찌개","팥죽"], // 눈오는날
+        "Hot": ["물냉면", "막국수", "콩국수","비빔냉면","삼계탕"], // 더운날
     };
 
     const weatherImages = {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 weatherIcon.innerHTML = `<img src="${imageUrl}" alt="${weatherCondition}">`;
 
                 const menus = weatherMenus[weatherCondition] || ["메뉴 추천이 없습니다"];
-                weatherMenuDisplay.textContent = `오늘의 추천 메뉴: ${menus.join(', ')}`;
+                weatherMenuDisplay.textContent = `날씨 추천 메뉴: ${menus.join(', ')}`;
             })
             .catch(() => {
                 weatherInfo.textContent = "날씨 정보를 가져올 수 없습니다.";
