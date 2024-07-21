@@ -23,7 +23,7 @@ button {
     cursor: pointer;
 }
 
-#weatherInfo, #weatherMenuDisplay {
+#weatherInfo, #weatherMenuDisplay, #gptRecommendation {
     margin-top: 20px;
     font-size: 18px;
     color: #555;
